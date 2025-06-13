@@ -17,7 +17,7 @@ body {
 
 /* Header (Hero Section) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1546483842-834c387b926d?fit=crop&w=1400&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(236, 43, 172, 0.6), rgba(180, 13, 202, 0.6)), url('https://images.unsplash.com/photo-1546483842-834c387b926d?fit=crop&w=1400&q=80') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -40,7 +40,7 @@ body {
 
 .btn {
     display: inline-block;
-    background-color: #FF6B6B; /* A vibrant red */
+    background-color: #e03030; /* A vibrant red */
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
