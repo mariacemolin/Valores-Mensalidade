@@ -1,60 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planos Academia</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Elite - Seu Treino Personalizado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Planos Academia</h1>
-    <div class="planos">
-
-      <div class="plano">
-        <div class="icon-weight">
-          <div class="base"></div>
-          <div class="bar"></div>
-          <div class="side left"></div>
-          <div class="side right"></div>
+    <header class="hero">
+        <div class="container">
+            <h1>Academia Elite</h1>
+            <p>Seu caminho para uma vida mais saudável e forte.</p>
+            <a href="#about" class="btn">Saiba Mais</a>
         </div>
-        <h2>Musculação + Cardio + Glúteo na Caneleira</h2>
-        <p><strong>6x na semana:</strong> R$ 330,00</p>
-        <p class="promocao">Pacote promocional: R$ 290,00</p>
-      </div>
+    </header>
 
-      <div class="plano">
-        <div class="icon-weight">
-          <div class="base"></div>
-          <div class="bar"></div>
-          <div class="side left"></div>
-          <div class="side right"></div>
+    <section id="about" class="about-us">
+        <div class="container">
+            <h2>Nosso Diferencial: Treino Personalizado</h2>
+            <p>Aqui na Academia Elite, trabalhamos com **acompanhamento de personal trainer**. Isso significa que, assim que você chegar, já terá um treino montado especialmente para você. A professora estará ao seu lado durante todo o treino, ajudando na execução, ajustando os pesos e garantindo que você faça tudo com segurança e eficiência.</p>
+            <p>Seu sucesso é a nossa prioridade!</p>
         </div>
-        <h2>Musculação</h2>
-        <p><strong>3x na semana:</strong> R$ 260,00</p>
-        <p><strong>2x na semana:</strong> R$ 210,00</p>
-      </div>
+    </section>
 
-      <div class="plano">
-        <div class="icon-weight">
-          <div class="base"></div>
-          <div class="bar"></div>
-          <div class="side left"></div>
-          <div class="side right"></div>
+    <section id="plans" class="plans-section">
+        <div class="container">
+            <h2>Nossos Planos</h2>
+            <div class="plans-grid">
+                <div class="plan-card featured">
+                    <h3>Musculação + Cardio + Glúteo na Caneleira</h3>
+                    <p class="frequency">6X na Semana</p>
+                    <p class="price">R$ 330,00</p>
+                    <p class="highlight">**Pacote promocional: R$ 290,00**</p>
+                    <p class="description">Treino completo para quem busca resultados intensos e acompanhamento diário.</p>
+                </div>
+                <div class="plan-card">
+                    <h3>Musculação</h3>
+                    <p class="frequency">3X na Semana</p>
+                    <p class="price">R$ 260,00</p>
+                    <p class="description">Ideal para quem busca foco em força e definição, com flexibilidade.</p>
+                </div>
+                <div class="plan-card">
+                    <h3>Musculação</h3>
+                    <p class="frequency">2X na Semana</p>
+                    <p class="price">R$ 210,00</p>
+                    <p class="description">Perfeito para iniciar ou manter a rotina de treinos, com ótimo custo-benefício.</p>
+                </div>
+                <div class="plan-card collective">
+                    <h3>Aulas Coletivas: Jump - Spinning Bike - Super Braços</h3>
+                    <p class="frequency">2X na Semana</p>
+                    <p class="price">R$ 150,00</p>
+                    <p class="description">Divirta-se e queime calorias com nossas aulas dinâmicas e energéticas!</p>
+                </div>
+                <div class="plan-card collective">
+                    <h3>Aulas Coletivas: Jump - Spinning Bike - Super Braços</h3>
+                    <p class="frequency">3X na Semana</p>
+                    <p class="price">R$ 180,00</p>
+                    <p class="description">Mais aulas, mais resultados! Acelere seu metabolismo e transforme seu corpo.</p>
+                </div>
+                <div class="plan-card collective featured-collective">
+                    <h3>Aulas Coletivas: Jump - Spinning Bike - Super Braços</h3>
+                    <p class="frequency">3X na Semana com + Glúteo na Caneleira</p>
+                    <p class="price">R$ 210,00</p>
+                    <p class="description">Pacote completo de coletivas com foco extra no fortalecimento de glúteos!</p>
+                </div>
+            </div>
         </div>
-        <h2>Aulas Coletivas</h2>
-        <p><strong>Jump, Spinning Bike, Super Braços</strong></p>
-        <p><strong>2x na semana:</strong> R$ 150,00</p>
-        <p><strong>3x na semana:</strong> R$ 180,00</p>
-        <p><strong>3x na semana + glúteo na caneleira:</strong> R$ 210,00</p>
-      </div>
+    </section>
 
-    </div>
-  </div>
+    <section class="contact-section">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p>Tem dúvidas ou quer agendar uma visita? Entre em contato!</p>
+            <a href="tel:+5544997559404" class="contact-number">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Telefone" class="phone-icon">
+                44 99755-9404
+            </a>
+            <p class="whatsapp-hint">Clique no número para ligar ou nos chame no WhatsApp!</p>
+        </div>
+    </section>
 
-  <section class="info-contato" aria-label="Informações de contato e personal trainer">
-    <p><strong>Mais informações:</strong> (44) 99755-9404</p>
-    <p>Aqui na academia, trabalhamos com acompanhamento de personal trainer. Isso significa que, assim que você chegar, já terá um treino montado especialmente para você. A professora estará ao seu lado durante todo o treino, ajudando na execução, ajustando os pesos e garantindo que você faça tudo com segurança e eficiência.</p>
-  </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Academia Elite. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

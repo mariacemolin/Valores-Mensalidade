@@ -1,189 +1,342 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-
+/* General Body Styles */
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fefefe;
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
-  min-height: 100vh;
-  box-sizing: border-box;
-  flex-direction: column;
-  align-items: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
-  max-width: 900px;
-  width: 100%;
-  background: linear-gradient(145deg, #3f2b96, #a8c0ff);
-  border-radius: 20px;
-  padding: 35px 45px;
-  box-shadow:
-    0 8px 30px rgba(99, 43, 255, 0.7),
-    inset 0 0 50px #d4bfff66;
-  margin-bottom: 50px;
-  color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 50px;
-  letter-spacing: 1.5px;
-  background: linear-gradient(90deg, #ffec00, #ff0080);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Header (Hero Section) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1546483842-834c387b926d?fit=crop&w=1400&q=80') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.planos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
-  justify-content: center;
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.plano {
-  background: linear-gradient(135deg, #9f00ff, #ff5e62);
-  border-radius: 25px;
-  padding: 30px 35px;
-  width: 300px;
-  box-shadow:
-    0 10px 25px rgba(255, 94, 98, 0.7),
-    inset 0 0 15px #fff1;
-  position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: default;
-  color: #fff;
-  text-align: center;
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    font-weight: 400;
 }
 
-.plano:hover {
-  transform: translateY(-15px) scale(1.05);
-  box-shadow:
-    0 15px 40px rgba(255, 94, 98, 0.9),
-    inset 0 0 25px #fff8;
+.btn {
+    display: inline-block;
+    background-color: #FF6B6B; /* A vibrant red */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.icon-weight {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 25px;
-  position: relative;
-  filter: drop-shadow(0 0 4px #ffd600cc);
+.btn:hover {
+    background-color: #e65a5a;
+    transform: translateY(-3px);
 }
 
-/* Base do peso */
-.icon-weight .base {
-  width: 100%;
-  height: 22px;
-  background: #ff00c8;
-  border-radius: 8px 8px 0 0;
-  box-shadow:
-    inset 0 4px 6px rgba(255,255,255,0.5),
-    0 3px 10px rgba(255, 0, 200, 0.7);
+/* About Us Section */
+.about-us {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Haste central */
-.icon-weight .bar {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 55px;
-  background: linear-gradient(135deg, #ff5e62, #ff0080);
-  border-radius: 10px;
-  box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.3);
-  z-index: 2;
+.about-us h2 {
+    font-size: 2.5em;
+    color: #FF6B6B;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
 }
 
-/* Pesos laterais */
-.icon-weight .side {
-  position: absolute;
-  top: 13px;
-  width: 25px;
-  height: 45px;
-  background: linear-gradient(135deg, #ff0080, #ff5e62);
-  border-radius: 8px;
-  box-shadow: inset 0 3px 8px rgba(255,255,255,0.3);
-  z-index: 1;
-  filter: drop-shadow(0 0 3px #ff0080aa);
+.about-us h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #FF6B6B;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
-.icon-weight .side.left {
-  left: 0;
-  transform: rotate(-12deg);
+.about-us p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.icon-weight .side.right {
-  right: 0;
-  transform: rotate(12deg);
+/* Plans Section */
+.plans-section {
+    background-color: #f0f0f0;
+    padding: 80px 20px;
+    text-align: center;
 }
 
-.plano h2 {
-  font-size: 1.7rem;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 5px #d600a6;
+.plans-section h2 {
+    font-size: 2.8em;
+    color: #4CAF50; /* A fresh green for plans */
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
 }
 
-.plano p {
-  font-size: 1.1rem;
-  margin: 8px 0;
-  font-weight: 700;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+.plans-section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #4CAF50;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
-.promocao {
-  color: #fff600;
-  font-weight: 900;
-  font-size: 1.3rem;
-  margin-top: 10px;
-  text-shadow: 0 0 8px #fff600bb;
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.info-contato {
-  max-width: 900px;
-  background: linear-gradient(135deg, #6700ffdd, #ff009988);
-  border-radius: 20px;
-  padding: 30px 45px;
-  box-shadow:
-    0 10px 30px rgba(255, 0, 153, 0.7),
-    inset 0 0 50px #ff00bbaa;
-  color: #fff;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  text-align: center;
-  font-weight: 600;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-  letter-spacing: 0.5px;
+.plan-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
 }
 
-.info-contato strong {
-  color: #fff700;
-  text-shadow: 0 0 10px #fff700cc;
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-.info-contato p + p {
-  margin-top: 1.3em;
+.plan-card h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-/* Responsivo */
-@media (max-width: 720px) {
-  .planos {
-    flex-direction: column;
+.plan-card .frequency {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.plan-card .price {
+    font-size: 2.5em;
+    color: #4CAF50;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.plan-card .highlight {
+    font-size: 1.2em;
+    color: #FF6B6B;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background-color: #FFF3CD;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.plan-card .description {
+    font-size: 0.95em;
+    color: #777;
+}
+
+.plan-card.featured {
+    border: 3px solid #FF6B6B;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+}
+
+.plan-card.featured::before {
+    content: 'MAIS POPULAR!';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FF6B6B;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-bottom-left-radius: 10px;
+    transform: rotate(5deg) translate(10px, -10px);
+    transform-origin: top right;
+}
+
+.plan-card.collective {
+    background-color: #E0F2F7; /* A light blue for collective classes */
+    border: 1px solid #B2EBF2;
+}
+
+.plan-card.collective h3 {
+    color: #2196F3; /* A strong blue */
+}
+
+.plan-card.collective .price {
+    color: #2196F3;
+}
+
+.plan-card.featured-collective {
+    border: 3px solid #2196F3;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(33,150,243,0.3);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact-number {
+    display: inline-flex; /* Use flexbox for icon and text alignment */
     align-items: center;
-  }
+    font-size: 2em;
+    color: #4CAF50; /* Green for the phone number */
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
 
-  .plano {
-    width: 90%;
-  }
+.contact-number:hover {
+    color: #76FF03; /* Lighter green on hover */
+}
 
-  .info-contato {
-    width: 90%;
-    padding: 25px 30px;
-    font-size: 1.1rem;
-  }
+.phone-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.whatsapp-hint {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .about-us h2, .plans-section h2, .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .plans-grid {
+        grid-template-columns: 1fr; /* Stack plans on small screens */
+    }
+
+    .plan-card {
+        padding: 25px;
+    }
+
+    .plan-card h3 {
+        font-size: 1.5em;
+    }
+
+    .plan-card .price {
+        font-size: 2em;
+    }
+
+    .contact-number {
+        font-size: 1.5em;
+    }
+
+    .phone-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .about-us, .plans-section, .contact-section {
+        padding: 40px 15px;
+    }
+
+    .about-us h2, .plans-section h2, .contact-section h2 {
+        font-size: 1.8em;
+    }
+
+    .about-us p {
+        font-size: 1em;
+    }
 }
